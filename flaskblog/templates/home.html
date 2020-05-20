@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!--The block belows prints out the blogs we have in the posts dictionary (dummy variable)
+     Also it prints them out in a separated block
+     "text-muted" makes the printed string looks faded and small
+     -->
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}ent %}content %}
